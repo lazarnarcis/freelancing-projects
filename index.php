@@ -28,6 +28,17 @@
 <body>
     <div>
         <h1>Freelancing Projects which I worked on</h1>
+        <p>
+            <?php 
+                $sql = 'SELECT description FROM `others` WHERE id=1';
+                $query = mysqli_query($link, $sql);
+                if (mysqli_num_rows($query) > 0) {
+                    while ($row = mysqli_fetch_assoc($query)) {
+                        echo $row['description'];
+                    }
+                }
+            ?>
+        </p>
         <table>
             <tr>
                 <th>ID</th>

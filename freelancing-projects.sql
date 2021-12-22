@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2021 at 09:32 AM
+-- Generation Time: Dec 22, 2021 at 06:58 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -20,6 +20,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `freelancing-projects`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `others`
+--
+
+CREATE TABLE `others` (
+  `id` int(11) NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `others`
+--
+
+INSERT INTO `others` (`id`, `description`) VALUES
+(1, 'Here you can see all the projects I have worked on so far!');
 
 -- --------------------------------------------------------
 
@@ -48,6 +66,12 @@ INSERT INTO `projects` (`id`, `contributor`, `contributor-link`, `link`, `name`,
 --
 
 --
+-- Indexes for table `others`
+--
+ALTER TABLE `others`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `projects`
 --
 ALTER TABLE `projects`
@@ -56,6 +80,12 @@ ALTER TABLE `projects`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `others`
+--
+ALTER TABLE `others`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `projects`
